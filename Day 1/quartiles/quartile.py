@@ -6,13 +6,13 @@ def sort_numbers(numbers):
         floats.append(float(num))
     return sorted(floats)
 
-def median(size, sorted_numbers):
+def median(size, numbers):
     index = size // 2
     sum = 0
     if size % 2 == 0:
-        sum = float(sorted_numbers[index-1]) + float(sorted_numbers[index])
+        sum = float(numbers[index-1]) + float(numbers[index])
     else:
-        sum = float(sorted_numbers[index]) * 2
+        sum = float(numbers[index]) * 2
 
     return sum / 2
 
@@ -42,4 +42,5 @@ def main():
     print "%.0f" % q[1]
     print "%.0f" % q[2]
 
-main()
+if __name__ == '__main__':
+    main()
